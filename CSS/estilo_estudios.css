@@ -1,0 +1,478 @@
+/* Estilos específicos para la página de Estudios Realizados */
+
+/* Container principal */
+.estudios-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+/* Título de la sección */
+.seccion-titulo {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.seccion-titulo h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--azul-oscuro);
+  margin-bottom: 1rem;
+}
+
+/* Sección de educación */
+.seccion-educacion {
+  background: var(--blanco);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px var(--sombra);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  animation: slideUp 0.8s ease-in;
+}
+
+.educacion-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--azul-principal);
+}
+
+.educacion-header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--azul-principal);
+}
+
+/* Sección del carousel - mismo estilo que hobbies */
+.seccion-carousel {
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background: var(--gris-claro);
+}
+
+/* Carousel con altura fija */
+.carousel.slide {
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-inner {
+  height: 450px;
+  border-radius: 15px;
+  background: #f8f9fa;
+}
+
+.carousel-item {
+  height: 450px;
+  transition: transform 0.6s ease-in-out;
+  background: #f8f9fa;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 15px;
+  display: block;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Caption del carousel */
+.carousel-caption {
+  background: rgba(0, 102, 204, 0.85);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  bottom: 2rem;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 80%;
+}
+
+.carousel-caption h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Indicadores del carousel */
+.carousel-indicators {
+  margin-bottom: 1.5rem;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--azul-principal);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Controles del carousel */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 102, 204, 0.7);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev {
+  left: 1rem;
+}
+
+.carousel-control-next {
+  right: 1rem;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+  background: var(--azul-principal);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Descripción de la educación */
+.educacion-descripcion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.descripcion-texto h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--azul-oscuro);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.descripcion-texto h3 i {
+  color: var(--azul-principal);
+  font-size: 1.8rem;
+}
+
+.descripcion-texto p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+/* Map wrapper */
+.map-wrapper {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px var(--sombra);
+  height: 300px;
+  background: var(--gris-claro);
+}
+
+.map-wrapper iframe {
+  border-radius: 15px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .carousel-inner,
+  .carousel-item {
+    height: 400px;
+  }
+
+  .educacion-descripcion {
+    grid-template-columns: 1fr;
+  }
+
+  .map-wrapper {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .estudios-container {
+    padding: 0 1rem;
+  }
+
+  .seccion-educacion {
+    padding: 2rem 1.5rem;
+  }
+
+  .seccion-carousel {
+    padding: 1rem;
+  }
+
+  .carousel-inner,
+  .carousel-item {
+    height: 300px;
+  }
+
+  .carousel-caption {
+    padding: 0.5rem 1rem;
+    bottom: 1rem;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.1rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-control-prev {
+    left: 0.5rem;
+  }
+
+  .carousel-control-next {
+    right: 0.5rem;
+  }
+
+  .educacion-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .descripcion-texto h3 {
+    font-size: 1.3rem;
+  }
+
+  .map-wrapper {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-inner,
+  .carousel-item {
+    height: 250px;
+  }
+
+  .seccion-titulo h1 {
+    font-size: 1.8rem;
+  }
+
+  .educacion-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .map-wrapper {
+    height: 250px;
+  }
+}
+/* Estilos para el menú desplegable de Estudios Realizados */
+nav ul li {
+  position: relative;
+}
+
+/* Estilos para el toggle de estudios */
+.estudios-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.estudios-dropdown-toggle i {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.estudios-dropdown-toggle:hover i {
+  transform: translateY(2px);
+}
+
+/* Submenu de estudios */
+.estudios-submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--blanco);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  list-style: none;
+  margin: 0;
+}
+
+.estudios-submenu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.estudios-submenu li {
+  padding: 0;
+  margin: 0;
+}
+
+.estudios-submenu li a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: var(--azul-oscuro);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.estudios-submenu li a:hover {
+  background: var(--azul-principal);
+  color: var(--blanco);
+  padding-left: 2rem;
+}
+
+/* Botón de horario */
+.btn-horario {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--azul-principal);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+}
+
+.btn-horario:hover {
+  background: var(--azul-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+  color: var(--blanco);
+}
+
+.btn-horario i {
+  font-size: 1.1rem;
+}
+
+/* Info adicional */
+.info-adicional {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  background: var(--gris-claro);
+  border-radius: 8px;
+}
+
+.info-item i {
+  color: var(--azul-principal);
+  font-size: 1.2rem;
+  width: 25px;
+  text-align: center;
+}
+
+.info-item strong {
+  color: var(--azul-oscuro);
+  min-width: 80px;
+}
+
+/* Navegación entre estudios */
+.navegacion-estudios {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--gris-claro);
+}
+
+.btn-navegacion {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: var(--azul-principal);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+}
+
+.btn-navegacion:hover {
+  background: var(--azul-oscuro);
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+  color: var(--blanco);
+}
+
+.btn-navegacion i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-navegacion:hover i {
+  transform: translateX(5px);
+}
+
+/* Responsive para el menú de estudios */
+@media (max-width: 768px) {
+  .estudios-submenu {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    min-width: auto;
+  }
+
+  .estudios-submenu.active {
+    transform: none;
+  }
+
+  .estudios-submenu li a {
+    padding-left: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .info-adicional {
+    gap: 0.5rem;
+  }
+
+  .info-item {
+    font-size: 0.9rem;
+  }
+
+  .btn-navegacion {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}

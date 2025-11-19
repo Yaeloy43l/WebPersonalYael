@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Yael Eduardo G.R</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/estilos.css" />
+    <link rel="stylesheet" href="CSS/estilos_contactar.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+     <header>
+      <div class="header-izquierdo">
+        <h1 class="logo">
+          <a href="index.html">Yael Eduardo G.R</a>
+        </h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="datos.html">Datos Personales</a></li>
+          <li>
+            <a href="#" class="circulo-dropdown-toggle">
+              Círculo Social <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="circulo-submenu">
+              <li><a href="circulo.html#familia" onclick="navegarASeccion(event, 'circulo.html', 'familia')">Familia</a></li>
+              <li><a href="circulo.html#pareja" onclick="navegarASeccion(event, 'circulo.html', 'pareja')">Pareja</a></li>
+              <li><a href="circulo.html#amigos" onclick="navegarASeccion(event, 'circulo.html', 'amigos')">Amigos</a></li>
+              <li><a href="circulo.html#mascotas" onclick="navegarASeccion(event, 'circulo.html', 'mascotas')">Mascotas</a></li>
+            </ul>
+          </li>
+          <li><a href="hobbies.html">Mis hobbies</a></li>
+          <li>
+            <a href="#" class="estudios-dropdown-toggle">
+              Estudios Realizados <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="estudios-submenu">
+              <li><a href="universidad.html">Universidad</a></li>
+              <li><a href="preparatoria.html">Preparatoria</a></li>
+              <li><a href="kinder-secundaria.html">Kinder-Secundaria</a></li>
+            </ul>
+          </li>
+          <li><a href="experiencia.html">Experiencia Profesional</a></li>
+          <li><a href="contactar.html" class="boton-contacto">Contactar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="contacto-seccion">
+      <div class="seccion-header">
+        <i class="fas fa-envelope-open-text icono-principal"></i>
+        <h2>Contáctame</h2>
+        <p class="subtitulo">
+          ¿Tienes alguna pregunta o proyecto en mente? Me encantaría escucharte
+        </p>
+      </div>
+
+      <div class="contacto-contenedor">
+        <!-- Información de contacto -->
+        <div class="info-contacto-card">
+          <h3 class="info-titulo">Información de Contacto</h3>
+          <p class="info-descripcion">
+            Puedes contactarme a través de cualquiera de estos medios. Respondo lo más pronto posible.
+          </p>
+
+          <div class="info-items">
+            <div class="info-item">
+              <div class="info-icono">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-contenido">
+                <h4>Email</h4>
+                <a href="mailto:yaeloyel@gmail.com">yaeloyel@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icono">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div class="info-contenido">
+                <h4>Instagram</h4>
+                <a href="https://www.instagram.com/yael_eduardo_guzman_/" target="_blank">
+                  @yael_eduardo_guzman_
+                </a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icono">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-contenido">
+                <h4>Ubicación</h4>
+                <p>Puebla, México</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icono">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="info-contenido">
+                <h4>Horario de respuesta</h4>
+                <p>Lun - Vie: 9:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="redes-sociales">
+            <h4>Sígueme en redes</h4>
+            <div class="redes-iconos">
+              <a href="https://www.instagram.com/yael_eduardo_guzman_/" target="_blank" class="red-icono instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="mailto:yaeloyel@gmail.com" class="red-icono email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <div class="formulario-card">
+          <div class="alert alert-success d-none" id="successMessage" role="alert">
+            <i class="fas fa-check-circle"></i> ¡Gracias! Tu mensaje ha sido enviado correctamente.
+          </div>
+
+          <form
+            id="contactForm"
+            action="https://formsubmit.co/yaeloyel@gmail.com"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <!-- Campos ocultos de FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
+
+            <div class="form-seccion">
+              <h3 class="form-seccion-titulo">
+                <i class="fas fa-user"></i> Información Personal
+              </h3>
+              
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">
+                    <i class="fas fa-user-circle"></i> Nombre completo *
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Juan Pérez García"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">
+                    <i class="fas fa-envelope"></i> Correo Electrónico *
+                  </label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="correo@ejemplo.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">
+                    <i class="fas fa-phone"></i> Teléfono
+                  </label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    placeholder="+52 222 123 4567"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="gender" class="form-label">
+                    <i class="fas fa-venus-mars"></i> Sexo
+                  </label>
+                  <select class="form-select" id="gender" name="gender">
+                    <option value="" selected disabled>Seleccionar</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Prefiero no decir</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-seccion">
+              <h3 class="form-seccion-titulo">
+                <i class="fas fa-map-marked-alt"></i> Ubicación
+              </h3>
+              
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="street" class="form-label">
+                    <i class="fas fa-road"></i> Dirección
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="street"
+                    name="street_address"
+                    placeholder="Calle, número, colonia"
+                  />
+                </div>
+              </div>
+
+              <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                  <label for="country" class="form-label">
+                    <i class="fas fa-globe"></i> País
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="country"
+                    name="country"
+                    placeholder="México"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="state" class="form-label">
+                    <i class="fas fa-map"></i> Estado
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="state"
+                    name="state"
+                    placeholder="Puebla"
+                  />
+                </div>
+              </div>
+
+              <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                  <label for="city" class="form-label">
+                    <i class="fas fa-city"></i> Ciudad
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="city"
+                    name="city"
+                    placeholder="Puebla"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="postal_code" class="form-label">
+                    <i class="fas fa-mail-bulk"></i> Código Postal
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="postal_code"
+                    name="postal_code"
+                    placeholder="72000"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-seccion">
+              <h3 class="form-seccion-titulo">
+                <i class="fas fa-comment-dots"></i> Tu Mensaje
+              </h3>
+              
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="subject" class="form-label">
+                    <i class="fas fa-tag"></i> Asunto *
+                  </label>
+                  <select class="form-select" id="subject" name="subject" required>
+                    <option value="" selected disabled>Selecciona un asunto</option>
+                    <option value="Consulta General">Consulta General</option>
+                    <option value="Proyecto">Propuesta de Proyecto</option>
+                    <option value="Colaboración">Colaboración</option>
+                    <option value="Empleo">Oportunidad de Empleo</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row g-3 mt-2">
+                <div class="col-12">
+                  <label for="comments" class="form-label">
+                    <i class="fas fa-pen"></i> Mensaje *
+                  </label>
+                  <textarea
+                    class="form-control"
+                    id="comments"
+                    name="comments"
+                    rows="6"
+                    placeholder="Escribe tu mensaje aquí..."
+                    required
+                  ></textarea>
+                  <div class="form-text">
+                    <i class="fas fa-info-circle"></i> Mínimo 10 caracteres
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3 mt-2">
+                <div class="col-12">
+                  <label for="attachment" class="form-label">
+                    <i class="fas fa-paperclip"></i> Si gusas que te conozca, inseta tu una imagen
+                  </label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="attachment"
+                    name="attachment"
+                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                  />
+                  <div class="form-text">
+                    <i class="fas fa-file-upload"></i> Formatos permitidos: PDF, DOC, DOCX, JPG, PNG (Máx. 25MB)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-seccion">
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="respuesta-group">
+                    <label class="form-label fw-bold">
+                      <i class="fas fa-reply"></i> ¿Deseas recibir una respuesta? *
+                    </label>
+                    <div class="respuesta-opciones">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="need_response"
+                          id="response_yes"
+                          value="Sí"
+                          checked
+                        />
+                        <label class="form-check-label" for="response_yes">
+                          <i class="fas fa-check"></i> Sí, espero tu respuesta
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="need_response"
+                          id="response_no"
+                          value="No"
+                        />
+                        <label class="form-check-label" for="response_no">
+                          <i class="fas fa-times"></i> No es necesario
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3 mt-3">
+                <div class="col-12">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="privacy"
+                      name="privacy"
+                      required
+                    />
+                    <label class="form-check-label" for="privacy">
+                      Acepto que mis datos sean utilizados para contactarme *
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="col-12">
+                  <button type="submit" class="btn-enviar">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                  </button>
+                  <button type="reset" class="btn-limpiar">
+                    <i class="fas fa-redo"></i> Limpiar Formulario
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="iconos">
+      <a
+        href="https://www.instagram.com/yael_eduardo_guzman_/"
+        target="_blank"
+        class="icono instagram"
+      >
+        <i class="fa-brands fa-square-instagram"></i>
+      </a>
+      <a href="mailto:yaeloyel@gmail.com" class="icono email" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 TECNM/ITP/Yael Eduardo Guzmán de la Rosa</p>
+    </footer>
+
+    <script>
+      // Función para navegar a una sección específica en otra página
+function navegarASeccion(event, pagina, seccion) {
+  event.preventDefault();
+  sessionStorage.setItem('seccionDestino', seccion);
+  window.location.href = pagina;
+}
+
+// Inicialización cuando el DOM está listo
+document.addEventListener('DOMContentLoaded', function() {
+  // Toggle del menú desplegable Círculo Social
+  const dropdownToggle = document.querySelector('.circulo-dropdown-toggle');
+  const submenu = document.querySelector('.circulo-submenu');
+  
+  if (dropdownToggle && submenu) {
+    dropdownToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      submenu.classList.toggle('active');
+      // Cerrar el otro menú si está abierto
+      if (estudiosSubmenu) estudiosSubmenu.classList.remove('active');
+    });
+  }
+
+  // Toggle del menú desplegable Estudios Realizados
+  const estudiosToggle = document.querySelector('.estudios-dropdown-toggle');
+  const estudiosSubmenu = document.querySelector('.estudios-submenu');
+  
+  if (estudiosToggle && estudiosSubmenu) {
+    estudiosToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      estudiosSubmenu.classList.toggle('active');
+      // Cerrar el otro menú si está abierto
+      if (submenu) submenu.classList.remove('active');
+    });
+  }
+
+  // Cerrar los menús si se hace clic fuera
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('nav ul li')) {
+      if (submenu) submenu.classList.remove('active');
+      if (estudiosSubmenu) estudiosSubmenu.classList.remove('active');
+    }
+  });
+
+  // Validación del formulario de contacto
+  const form = document.getElementById('contactForm');
+  const successMessage = document.getElementById('successMessage');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      const comments = document.getElementById('comments').value;
+      if (comments.length < 10) {
+        e.preventDefault();
+        alert('El mensaje debe tener al menos 10 caracteres');
+        return false;
+      }
+    });
+  }
+});
+    </script>
+  </body>
+</html>

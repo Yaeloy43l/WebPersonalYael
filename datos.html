@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datos Personales</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="CSS/estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="CSS/estilo_datos.css" />
+  </head>
+  <body>
+      <header>
+      <div class="header-izquierdo">
+        <h1 class="logo">
+          <a href="index.html">Yael Eduardo G.R</a>
+        </h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="datos.html">Datos Personales</a></li>
+          <li>
+            <a href="#" class="circulo-dropdown-toggle">
+              Círculo Social <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="circulo-submenu">
+              <li><a href="circulo.html#familia" onclick="navegarASeccion(event, 'circulo.html', 'familia')">Familia</a></li>
+              <li><a href="circulo.html#pareja" onclick="navegarASeccion(event, 'circulo.html', 'pareja')">Pareja</a></li>
+              <li><a href="circulo.html#amigos" onclick="navegarASeccion(event, 'circulo.html', 'amigos')">Amigos</a></li>
+              <li><a href="circulo.html#mascotas" onclick="navegarASeccion(event, 'circulo.html', 'mascotas')">Mascotas</a></li>
+            </ul>
+          </li>
+          <li><a href="hobbies.html">Mis hobbies</a></li>
+          <li>
+            <a href="#" class="estudios-dropdown-toggle">
+              Estudios Realizados <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="estudios-submenu">
+              <li><a href="universidad.html">Universidad</a></li>
+              <li><a href="preparatoria.html">Preparatoria</a></li>
+              <li><a href="kinder-secundaria.html">Kinder-Secundaria</a></li>
+            </ul>
+          </li>
+          <li><a href="experiencia.html">Experiencia Profesional</a></li>
+          <li><a href="contactar.html" class="boton-contacto">Contactar</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container datos-container">
+      <div class="seccion-titulo">
+        <h1>Datos Personales</h1>
+      </div>
+
+      <div class="perfil-tarjeta">
+        <div class="perfil-contenido">
+          <div class="perfil-foto-container">
+            <div class="perfil-foto-wrapper">
+              <img
+                src="imagenes/yo/IMG_0205.jpg"
+                alt="Foto de perfil datos personales"
+                class="perfil-foto clickable-image"
+                onclick="abrirModal(this.src, this.alt, 'Yael Eduardo Guzmán de la Rosa', 'Estudiante de Ingeniería en Tecnologías de la Información. Apasionado por la tecnología y el desarrollo personal.')"
+              />
+            </div>
+          </div>
+
+          <div class="perfil-info">
+            <h2 class="perfil-nombre">Yael Eduardo Guzmán de la Rosa</h2>
+            <p class="perfil-detalles">
+              <i class="fas fa-calendar-alt"></i> 13/10/2004 ·
+              <i class="fas fa-map-marker-alt"></i> Puebla, México
+            </p>
+
+            <div class="perfil-separador"></div>
+
+            <div class="perfil-descripcion">
+              <p>
+                Estudiante de la carrera de Ingeniería
+                en Tecnologias de la Información y Comunicaciones.
+                Soy una persona que se esfuerza en todo que a demas soy
+                comprometido en adquirir habilidades y
+                conocimientos prácticos para mejorar.
+              </p>
+            </div>
+
+            <div class="perfil-separador"></div>
+
+            <div class="perfil-lenguajes">
+              <h3><i class="fas fa-language"></i> Lenguajes</h3>
+              <div class="lenguajes-grid">
+                <div class="lenguaje-item">
+                  <span class="lenguaje-nombre">Español</span>
+                  <span class="lenguaje-nivel">Nativo</span>
+                </div>
+                <div class="lenguaje-item">
+                  <span class="lenguaje-nombre">Inglés</span>
+                  <span class="lenguaje-nivel">Intermedio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Galería de Fotos - IMÁGENES CORREGIDAS CON ONCLICK -->
+      <div class="galeria-fotos-seccion">
+        <div class="galeria-header">
+          <h2><i class="fas fa-camera"></i> Galería Personal</h2>
+        </div>
+
+        <div class="fotos-grid">
+          <div class="foto-card">
+            <div class="foto-wrapper">
+              <img
+                src="imagenes/yo/000_0222.jpg"
+                alt="Foto personal 1"
+                class="foto-imagen clickable-image"
+                onclick="abrirModal(this.src, this.alt, 'Infancia Divertida', 'Foto de pequeño mordiendo un pollo vivo. Un momento gracioso y espontáneo de mi infancia que siempre me hace sonreír.')"
+              />
+            </div>
+            <div class="foto-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <div class="foto-card">
+            <div class="foto-wrapper">
+              <img
+                src="imagenes/yo/DSC03968.jpg"
+                alt="Foto personal 2"
+                class="foto-imagen clickable-image"
+                onclick="abrirModal(this.src, this.alt, 'Torneo Nacional de LimaLama', 'Participación en un torneo nacional de LimaLama. Un momento importante en mi desarrollo deportivo donde demostré disciplina y dedicación.')"
+              />
+            </div>
+            <div class="foto-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <div class="foto-card">
+            <div class="foto-wrapper">
+              <img
+                src="imagenes/yo/DSC_0327.jpg"
+                alt="Foto personal 3"
+                class="foto-imagen clickable-image"
+                onclick="abrirModal(this.src, this.alt, 'Entrenamiento de LimaLama', 'Foto de uno de mis entrenamientos de LimaLama. Esta disciplina me enseñó perseverancia, respeto y autocontrol.')"
+              />
+            </div>
+            <div class="foto-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <div class="foto-card">
+            <div class="foto-wrapper">
+              <img
+                src="imagenes/yo/IMG_1986.jpg"
+                alt="Foto personal 4"
+                class="foto-imagen clickable-image"
+                onclick="abrirModal(this.src, this.alt, 'Taller de Artes Plásticas', 'Presentación de mi cuadro en un taller de artes plásticas. Explorar mi lado creativo me permitió expresarme de nuevas formas.')"
+              />
+            </div>
+            <div class="foto-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <div class="foto-card">
+            <div class="foto-wrapper">
+              <img
+                src="imagenes/yo/IMG_20220701_193228286.jpg"
+                alt="Foto personal 5"
+                class="foto-imagen clickable-image"
+                onclick="abrirModal(this.src, this.alt, 'Graduación Preparatoria', 'Foto de mi graduación en la prepa. Un logro importante que marcó el fin de una etapa y el inicio de nuevos desafíos universitarios.')"
+              />
+            </div>
+            <div class="foto-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <div class="foto-card">
+            <div class="foto-wrapper">
+              <img
+                src="imagenes/yo/IMG-20170404-WA0044.jpg"
+                alt="Foto personal 6"
+                class="foto-imagen clickable-image"
+                onclick="abrirModal(this.src, this.alt, '16 de Septiembre', 'Foto de un 16 de septiembre de hace años. Celebrando las fiestas patrias con orgullo mexicano y momentos memorables con seres queridos.')"
+              />
+            </div>
+            <div class="foto-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Información Adicional -->
+      <div class="info-adicional-seccion">
+        <div class="info-header">
+          <h2><i class="fas fa-info-circle"></i> Información Adicional</h2>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h3>Estado Laboral</h3>
+            <p>Estudiante activo buscando oportunidades de crecimiento profesional</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <h3>Estado Civil</h3>
+            <p>Soltero</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Intereses Personales</h3>
+            <p>Tecnología, deportes, música y desarrollo personal</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3>Valores</h3>
+            <p>Responsabilidad, compromiso, trabajo en equipo y mejora continua</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Habilidades Blandas -->
+      <div class="habilidades-blandas-seccion">
+        <div class="habilidades-header">
+          <h2><i class="fas fa-users"></i> Habilidades  </h2>
+        </div>
+
+        <div class="habilidades-container">
+          <div class="habilidad-item">
+            <div class="habilidad-nombre">
+              <i class="fas fa-comments"></i> Comunicación
+            </div>
+            <div class="habilidad-barra">
+              <div class="habilidad-progreso" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="habilidad-item">
+            <div class="habilidad-nombre">
+              <i class="fas fa-users-cog"></i> Trabajo en Equipo
+            </div>
+            <div class="habilidad-barra">
+              <div class="habilidad-progreso" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="habilidad-item">
+            <div class="habilidad-nombre">
+              <i class="fas fa-lightbulb"></i> Resolución de Problemas
+            </div>
+            <div class="habilidad-barra">
+              <div class="habilidad-progreso" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="habilidad-item">
+            <div class="habilidad-nombre">
+              <i class="fas fa-clock"></i> Gestión del Tiempo
+            </div>
+            <div class="habilidad-barra">
+              <div class="habilidad-progreso" style="width: 75%"></div>
+            </div>
+          </div>
+
+          <div class="habilidad-item">
+            <div class="habilidad-nombre">
+              <i class="fas fa-brain"></i> Adaptabilidad
+            </div>
+            <div class="habilidad-barra">
+              <div class="habilidad-progreso" style="width: 88%"></div>
+            </div>
+          </div>
+
+          <div class="habilidad-item">
+            <div class="habilidad-nombre">
+              <i class="fas fa-bullseye"></i> Liderazgo
+            </div>
+            <div class="habilidad-barra">
+              <div class="habilidad-progreso" style="width: 78%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="musica-seccion">
+        <div class="musica-header">
+          <h2><i class="fas fa-music"></i> Mis Canciones Favoritas</h2>
+        </div>
+
+        <div class="canciones-container">
+          <div class="cancion" data-cancion="1">
+            <div class="cancion-header">
+              <div class="cancion-info">
+                <div class="cancion-titulo">Outside</div>
+                <div class="cancion-artista">Calvin Harris ft. Ellie Goulding</div>
+              </div>
+            </div>
+            <div class="cancion-player-container">
+              <iframe
+                class="cancion-iframe"
+                id="iframe-1"
+                src="https://open.spotify.com/embed/track/7MmG8p0F9N3C4AXdK6o6Eb?utm_source=generator"
+                width="100%"
+                height="152"
+                frameBorder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="cancion" data-cancion="2">
+            <div class="cancion-header">
+              <div class="cancion-info">
+                <div class="cancion-titulo">Toda esta ciudad</div>
+                <div class="cancion-artista">Kevin Kaarl</div>
+              </div>
+            </div>
+            <div class="cancion-player-container">
+              <iframe
+                class="cancion-iframe"
+                id="iframe-2"
+                src="https://open.spotify.com/embed/track/7axrsgYy5Zf4UkpZ4FrKba?utm_source=generator"
+                width="100%"
+                height="152"
+                frameBorder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="cancion" data-cancion="3">
+            <div class="cancion-header">
+              <div class="cancion-info">
+                <div class="cancion-titulo">Me va a costar</div>
+                <div class="cancion-artista">Kevin Kaarl</div>
+              </div>
+            </div>
+            <div class="cancion-player-container">
+              <iframe
+                class="cancion-iframe"
+                id="iframe-3"
+                src="https://open.spotify.com/embed/track/0Y7NqQ9RNoHZHDTeDS4UnO?utm_source=generator"
+                width="100%"
+                height="152"
+                frameBorder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal mejorado para imagen con descripción -->
+    <div id="modalImagen" class="modal-fullscreen-image" onclick="cerrarModalClick(event)">
+      <span class="modal-close-btn" onclick="cerrarModal()">&times;</span>
+      <div class="modal-content-wrapper">
+        <div class="modal-image-container">
+          <img class="modal-fullscreen-content" id="imagenModal" alt="">
+        </div>
+        <div class="modal-description-container">
+          <h3 class="modal-description-title" id="modalTitulo"></h3>
+          <p class="modal-description-text" id="modalDescripcion"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="iconos">
+      <a
+        href="https://www.instagram.com/yael_eduardo_guzman_/"
+        target="_blank"
+        class="icono instagram"
+        ><i class="fa-brands fa-square-instagram"></i
+      ></a>
+      <a
+        href="mailto:yaeloyel@gmail.com"
+        class="icono email"
+        target="_blank"
+        ><i class="fas fa-envelope"></i
+      ></a>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 TECNM/ITP/Yael Eduardo Guzmán de la Rosa</p>
+    </footer>
+
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+    <script>
+      // Función para navegar a una sección específica en otra página
+function navegarASeccion(event, pagina, seccion) {
+  event.preventDefault();
+  sessionStorage.setItem('seccionDestino', seccion);
+  window.location.href = pagina;
+}
+
+// Funciones del Modal de Imágenes
+function abrirModal(src, alt, titulo, descripcion) {
+  const modal = document.getElementById('modalImagen');
+  const modalImg = document.getElementById('imagenModal');
+  const modalTitulo = document.getElementById('modalTitulo');
+  const modalDescripcion = document.getElementById('modalDescripcion');
+  
+  modal.classList.add('active');
+  modalImg.src = src;
+  modalImg.alt = alt;
+  modalTitulo.textContent = titulo;
+  modalDescripcion.textContent = descripcion || '';
+  document.body.style.overflow = 'hidden';
+}
+
+function cerrarModal() {
+  const modal = document.getElementById('modalImagen');
+  modal.classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+function cerrarModalClick(event) {
+  if (event.target.id === 'modalImagen') {
+    cerrarModal();
+  }
+}
+
+// Inicialización cuando el DOM está listo
+document.addEventListener('DOMContentLoaded', function() {
+  // Toggle del menú desplegable Círculo Social
+  const dropdownToggle = document.querySelector('.circulo-dropdown-toggle');
+  const submenu = document.querySelector('.circulo-submenu');
+  
+  if (dropdownToggle && submenu) {
+    dropdownToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      submenu.classList.toggle('active');
+    });
+  }
+
+  // Toggle del menú desplegable Estudios Realizados
+  const estudiosToggle = document.querySelector('.estudios-dropdown-toggle');
+  const estudiosSubmenu = document.querySelector('.estudios-submenu');
+  
+  if (estudiosToggle && estudiosSubmenu) {
+    estudiosToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      estudiosSubmenu.classList.toggle('active');
+    });
+  }
+
+  // Cerrar los menús si se hace clic fuera
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('nav ul li')) {
+      if (submenu) submenu.classList.remove('active');
+      if (estudiosSubmenu) estudiosSubmenu.classList.remove('active');
+    }
+  });
+
+  // Cerrar modal con tecla ESC
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      cerrarModal();
+    }
+  });
+});
+
+// Spotify Embed API
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+  const element1 = document.getElementById('<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7MmG8p0F9N3C4AXdK6o6Eb?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>');
+  const element2 = document.getElementById('<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7axrsgYy5Zf4UkpZ4FrKba?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>');
+  const element3 = document.getElementById('<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0Y7NqQ9RNoHZHDTeDS4UnO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>');
+  
+  const options = {
+    width: '100%',
+    height: '152'
+  };
+
+  let controller1, controller2, controller3;
+
+  if (element1) {
+    IFrameAPI.createController(element1, options, (EmbedController) => {
+      controller1 = EmbedController;
+      
+      controller1.addListener('playback_update', e => {
+        if (!e.data.isPaused && e.data.position > 0) {
+          if (controller2) controller2.pause();
+          if (controller3) controller3.pause();
+        }
+      });
+    });
+  }
+
+  if (element2) {
+    IFrameAPI.createController(element2, options, (EmbedController) => {
+      controller2 = EmbedController;
+      
+      controller2.addListener('playback_update', e => {
+        if (!e.data.isPaused && e.data.position > 0) {
+          if (controller1) controller1.pause();
+          if (controller3) controller3.pause();
+        }
+      });
+    });
+  }
+
+  if (element3) {
+    IFrameAPI.createController(element3, options, (EmbedController) => {
+      controller3 = EmbedController;
+      
+      controller3.addListener('playback_update', e => {
+        if (!e.data.isPaused && e.data.position > 0) {
+          if (controller1) controller1.pause();
+          if (controller2) controller2.pause();
+        }
+      });
+    });
+  }
+};
+    </script>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YEGR-CV</title>
+    <link rel="stylesheet" href="CSS/estilos.css" />
+    <link rel="stylesheet" href="CSS/estilo_datos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    
+  </head>
+  <body>
+    <header>
+      <div class="header-izquierdo">
+        <h1 class="logo">
+          <a href="index.html">Yael Eduardo G.R</a>
+        </h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="datos.html">Datos Personales</a></li>
+          <li class="dropdown-item">
+            <a href="#" class="circulo-dropdown-toggle">
+              Círculo Social <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="circulo-submenu">
+              <li><a href="circulo.html#familia" onclick="navegarASeccion(event, 'circulo.html', 'familia')">Familia</a></li>
+              <li><a href="circulo.html#pareja" onclick="navegarASeccion(event, 'circulo.html', 'pareja')">Pareja</a></li>
+              <li><a href="circulo.html#amigos" onclick="navegarASeccion(event, 'circulo.html', 'amigos')">Amigos</a></li>
+              <li><a href="circulo.html#mascotas" onclick="navegarASeccion(event, 'circulo.html', 'mascotas')">Mascotas</a></li>
+            </ul>
+          </li>
+          <li><a href="hobbies.html">Mis hobbies</a></li>
+          <li class="dropdown-item">
+            <a href="#" class="estudios-dropdown-toggle">
+              Estudios Realizados <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="estudios-submenu">
+              <li><a href="universidad.html">Universidad</a></li>
+              <li><a href="preparatoria.html">Preparatoria</a></li>
+              <li><a href="kinder-secundaria.html">Kinder-Secundaria</a></li>
+            </ul>
+          </li>
+          <li><a href="experiencia.html">Experiencia Profesional</a></li>
+          <li><a href="contactar.html" class="boton-contacto">Contactar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="content-area">
+      <main>
+        <section class="inicio">
+          <div class="frame-foto-index">
+            <div class="frame-imagen-index">
+              <img
+                src="imagenes/yo/IMG_20211205_001706.jpg"
+                alt="Foto de perfil datos personales"
+                class="imagen-perfil"
+              />
+            </div>
+          </div>
+          <div class="inicio-contenido">
+            <p class="saludo">Hola, soy</p>
+            <h2 class="nombre">Yael</h2>
+            <h3 class="texto-escribiendo">Un <span id="palabra-cambiante"></span></h3>
+            <p class="informacion">
+              Estudiante de Ingeniería en Tecnologías de la Información y
+              Comunicación en el Instituto tecnologico de puebla.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="iconos">
+      <a
+        href="https://www.instagram.com/yael_eduardo_guzman_/"
+        target="_blank"
+        class="icono instagram"
+        ><i class="fa-brands fa-square-instagram"></i
+      ></a>
+      <a
+        href="mailto:yaeloyel@gmail.com"
+        class="icono email"
+        target="_blank"
+        ><i class="fas fa-envelope"></i
+      ></a>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 TECNM/ITP/Yael Eduardo Guzmán de la Rosa</p>
+    </footer>
+
+    <script>
+      // Función para el texto que cambia automáticamente
+      const palabras = ["Estudiante", "Programador", "Desarrollador web"];
+      let indicePalabra = 0;
+      let indiceLetra = 0;
+      let escribiendo = true;
+      let palabraActual = '';
+
+      function escribirTexto() {
+        const elemento = document.getElementById('palabra-cambiante');
+        
+        if (escribiendo) {
+          if (indiceLetra < palabras[indicePalabra].length) {
+            palabraActual += palabras[indicePalabra][indiceLetra];
+            elemento.textContent = palabraActual;
+            indiceLetra++;
+            setTimeout(escribirTexto, 150);
+          } else {
+            escribiendo = false;
+            setTimeout(escribirTexto, 2000);
+          }
+        } else {
+          if (indiceLetra > 0) {
+            palabraActual = palabraActual.slice(0, -1);
+            elemento.textContent = palabraActual;
+            indiceLetra--;
+            setTimeout(escribirTexto, 100);
+          } else {
+            escribiendo = true;
+            indicePalabra = (indicePalabra + 1) % palabras.length;
+            setTimeout(escribirTexto, 500);
+          }
+        }
+      }
+
+      // Función para navegar a una sección específica en otra página
+      function navegarASeccion(event, pagina, seccion) {
+        event.preventDefault();
+        sessionStorage.setItem('seccionDestino', seccion);
+        window.location.href = pagina;
+      }
+
+      // Inicialización cuando el DOM está listo
+      document.addEventListener('DOMContentLoaded', function() {
+        // Iniciar el efecto de escritura
+        escribirTexto();
+
+        // Toggle del menú desplegable Círculo Social
+        const dropdownToggle = document.querySelector('.circulo-dropdown-toggle');
+        const submenu = document.querySelector('.circulo-submenu');
+        
+        if (dropdownToggle && submenu) {
+          dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Cerrar el otro menú si está abierto
+            const estudiosSubmenu = document.querySelector('.estudios-submenu');
+            if (estudiosSubmenu) {
+              estudiosSubmenu.classList.remove('active');
+            }
+            
+            submenu.classList.toggle('active');
+          });
+        }
+
+        // Toggle del menú desplegable Estudios Realizados
+        const estudiosToggle = document.querySelector('.estudios-dropdown-toggle');
+        const estudiosSubmenu = document.querySelector('.estudios-submenu');
+        
+        if (estudiosToggle && estudiosSubmenu) {
+          estudiosToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Cerrar el otro menú si está abierto
+            if (submenu) {
+              submenu.classList.remove('active');
+            }
+            
+            estudiosSubmenu.classList.toggle('active');
+          });
+        }
+
+        // Cerrar los menús si se hace clic fuera
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.dropdown-item')) {
+            if (submenu) submenu.classList.remove('active');
+            if (estudiosSubmenu) estudiosSubmenu.classList.remove('active');
+          }
+        });
+
+        // Prevenir que los clics dentro del submenú lo cierren
+        if (submenu) {
+          submenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+          });
+        }
+        
+        if (estudiosSubmenu) {
+          estudiosSubmenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

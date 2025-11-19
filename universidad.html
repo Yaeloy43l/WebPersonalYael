@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universidad - Estudios Realizados</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="CSS/estilos.css" />
+    <link rel="stylesheet" href="CSS/estilo_estudios.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-izquierdo">
+        <h1 class="logo">
+          <a href="index.html">Yael Eduardo G.R</a>
+        </h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="datos.html">Datos Personales</a></li>
+          <li>
+            <a href="#" class="circulo-dropdown-toggle">
+              Círculo Social <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="circulo-submenu">
+              <li><a href="circulo.html#familia" onclick="navegarASeccion(event, 'circulo.html', 'familia')">Familia</a></li>
+              <li><a href="circulo.html#pareja" onclick="navegarASeccion(event, 'circulo.html', 'pareja')">Pareja</a></li>
+              <li><a href="circulo.html#amigos" onclick="navegarASeccion(event, 'circulo.html', 'amigos')">Amigos</a></li>
+              <li><a href="circulo.html#mascotas" onclick="navegarASeccion(event, 'circulo.html', 'mascotas')">Mascotas</a></li>
+            </ul>
+          </li>
+          <li><a href="hobbies.html">Mis hobbies</a></li>
+          <li>
+            <a href="#" class="estudios-dropdown-toggle">
+              Estudios Realizados <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="estudios-submenu">
+              <li><a href="universidad.html">Universidad</a></li>
+              <li><a href="preparatoria.html">Preparatoria</a></li>
+              <li><a href="kinder-secundaria.html">Kinder-Secundaria</a></li>
+            </ul>
+          </li>
+          <li><a href="experiencia.html">Experiencia Profesional</a></li>
+          <li><a href="contactar.html" class="boton-contacto">Contactar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container estudios-container">
+      <div class="seccion-titulo">
+        <h1><i class="fas fa-university"></i> Universidad</h1>
+        <p class="subtitulo">Instituto Tecnológico de Puebla</p>
+      </div>
+
+      <!-- Instituto Tecnológico de Puebla -->
+      <div class="seccion-educacion">
+        <div class="educacion-header">
+          <h2>Actualmente - Instituto Tecnológico de Puebla</h2>
+          <a href="horario.html" class="btn-horario">
+            <i class="fas fa-clock"></i> Ver Horario
+          </a>
+        </div>
+
+        <div class="seccion-carousel">
+          <div
+            id="itpCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#itpCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#itpCarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="imagenes/logo02-1568x1568.jpg"
+                  class="d-block w-100"
+                  alt="Instituto Tecnológico de Puebla logo"
+                />
+                <div class="carousel-caption">
+                  <h5>Instituto Tecnológico de Puebla</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="imagenes/itp.jpg"
+                  class="d-block w-100"
+                  alt="Fachada del Instituto Tecnológico de Puebla"
+                />
+                <div class="carousel-caption">
+                  <h5>Campus ITP</h5>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#itpCarousel"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#itpCarousel"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="educacion-descripcion">
+          <div class="descripcion-texto">
+            <h3><i class="fas fa-graduation-cap"></i> Ingeniería en Tecnologías de la Información y Comunicación</h3>
+            <p>
+              Actualmente me encuentro cursando la carrera de Ingeniería en
+              Tecnologías de la Información y Comunicación en el Instituto
+              Tecnológico de Puebla. El instituto se encuentra ubicado en la
+              ciudad de Puebla, Puebla, México. En esta carrera veo diferentes
+              materias como programación, bases de datos, redes de computadoras,
+              desarrollo web, y muchas otras que me preparan para ser un
+              profesional en el área de tecnologías de la información y
+              comunicación.
+            </p>
+            
+            <div class="info-adicional">
+              <div class="info-item">
+                <i class="fas fa-calendar-alt"></i>
+                <strong>Periodo:</strong> Agosto 2022 - Actualidad
+              </div>
+              <div class="info-item">
+                <i class="fas fa-trophy"></i>
+                <strong>Promedio:</strong> 85.13
+              </div>
+              <div class="info-item">
+                <i class="fas fa-book-reader"></i>
+                <strong>Semestre:</strong> 7mo
+              </div>
+            </div>
+          </div>
+
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8829701793384!2d-98.16816940000001!3d19.068882400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc1a52226fe83%3A0x189ca4d259102630!2sInstituto%20Tecnol%C3%B3gico%20de%20Puebla!5e0!3m2!1sen!2smx!4v1742960863218!5m2!1sen!2smx"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Mapa del Instituto Tecnológico de Puebla"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="iconos">
+      <a
+        href="https://www.instagram.com/yael_eduardo_guzman_/"
+        target="_blank"
+        class="icono instagram"
+        ><i class="fa-brands fa-square-instagram"></i
+      ></a>
+      <a
+        href="mailto:yaeloyel@gmail.com"
+        class="icono email"
+        target="_blank"
+        ><i class="fas fa-envelope"></i
+      ></a>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 TECNM/ITP/Yael Eduardo Guzmán de la Rosa</p>
+    </footer>
+
+    <script>
+      // Función para navegar a una sección específica en otra página
+      function navegarASeccion(event, pagina, seccion) {
+        event.preventDefault();
+        sessionStorage.setItem('seccionDestino', seccion);
+        window.location.href = pagina;
+      }
+
+      // Toggle del menú desplegable Círculo Social
+      document.addEventListener('DOMContentLoaded', function() {
+        const dropdownToggle = document.querySelector('.circulo-dropdown-toggle');
+        const submenu = document.querySelector('.circulo-submenu');
+        
+        if (dropdownToggle && submenu) {
+          dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            submenu.classList.toggle('active');
+          });
+
+          document.addEventListener('click', function(e) {
+            if (!e.target.closest('nav ul li')) {
+              submenu.classList.remove('active');
+            }
+          });
+        }
+
+        // Toggle del menú desplegable Estudios
+        const estudiosToggle = document.querySelector('.estudios-dropdown-toggle');
+        const estudiosSubmenu = document.querySelector('.estudios-submenu');
+        
+        if (estudiosToggle && estudiosSubmenu) {
+          estudiosToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            estudiosSubmenu.classList.toggle('active');
+          });
+
+          document.addEventListener('click', function(e) {
+            if (!e.target.closest('nav ul li')) {
+              estudiosSubmenu.classList.remove('active');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

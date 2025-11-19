@@ -1,0 +1,493 @@
+/* ===== VARIABLES DE COLOR ===== */
+:root {
+  --azul-principal: #0066cc;
+  --azul-oscuro: #003d7a;
+  --blanco: #ffffff;
+  --gris-claro: #f5f5f5;
+  --sombra: rgba(0, 0, 0, 0.1);
+  --color-primary: #00d9ff;
+  --color-secondary: #8b5cf6;
+  --color-accent: #10b981;
+  --color-dark: #0a0a0a;
+  --color-dark-alt: #1a1a1a;
+  --color-gray: #2a2a2a;
+  --color-gray-light: #3a3a3a;
+  --color-text: #e5e5e5;
+  --color-text-dim: #a0a0a0;
+  --gradient-primary: linear-gradient(135deg, #00d9ff 0%, #8b5cf6 50%, #10b981 100%);
+}
+
+/* ===== RESET Y BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--color-dark);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: var(--color-dark-alt);
+  padding: 0.8rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 217, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.header-izquierdo .logo a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.header-izquierdo .logo a:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* ===== NAVEGACIÓN ===== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--color-primary);
+  background: var(--color-gray);
+}
+
+nav ul li a:hover::before {
+  width: 80%;
+}
+
+.boton-contacto {
+  background: var(--gradient-primary) !important;
+  color: var(--color-dark) !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
+}
+
+.boton-contacto:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 217, 255, 0.5);
+}
+
+.boton-contacto::before {
+  display: none;
+}
+
+/* ===== MENÚS DESPLEGABLES ===== */
+.circulo-dropdown-toggle,
+.estudios-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.estudios-dropdown-toggle i,
+.circulo-dropdown-toggle i {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.estudios-dropdown-toggle:hover i,
+.circulo-dropdown-toggle:hover i {
+  transform: translateY(2px);
+}
+
+.circulo-submenu,
+.estudios-submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-gray);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--color-gray-light);
+  z-index: 1000;
+  list-style: none;
+  margin: 0;
+}
+
+.circulo-submenu.active,
+.estudios-submenu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.circulo-submenu li,
+.estudios-submenu li {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.circulo-submenu li a,
+.estudios-submenu li a {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0;
+  display: block;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.circulo-submenu li a:hover,
+.estudios-submenu li a:hover {
+  background: var(--color-gray-light);
+  padding-left: 2rem;
+  color: var(--color-primary);
+}
+
+.circulo-submenu li a::before,
+.estudios-submenu li a::before {
+  display: none;
+}
+
+/* ===== CONTENEDOR DEL HORARIO ===== */
+.horario-container {
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* ===== GRID DEL HORARIO ===== */
+.horario-grid {
+  display: grid;
+  grid-template-columns: 80px repeat(7, 1fr);
+  gap: 8px;
+  background: var(--color-dark-alt);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 217, 255, 0.2);
+  animation: slideUp 0.8s ease-in;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Encabezados */
+.header-cell {
+  background: var(--gradient-primary);
+  color: var(--color-dark);
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
+}
+
+/* Celdas de tiempo */
+.time-cell {
+  background: var(--color-gray);
+  padding: 1rem 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-primary);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Celdas vacías */
+.empty-cell {
+  background: transparent;
+  min-height: 80px;
+}
+
+/* Celdas de clase */
+.class-cell {
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.class-cell:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.class-content {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+}
+
+.class-content strong {
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.class-content small {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+/* Colores de las materias */
+.class-cell.pink {
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+  border: 2px solid #f9a8d4;
+  color: #831843;
+}
+
+.class-cell.purple {
+  background: linear-gradient(135deg, #e9d5ff 0%, #ddd6fe 100%);
+  border: 2px solid #c084fc;
+  color: #581c87;
+}
+
+.class-cell.yellow {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #fcd34d;
+  color: #78350f;
+}
+
+.class-cell.orange {
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+  border: 2px solid #fb923c;
+  color: #7c2d12;
+}
+
+.class-cell.cyan {
+  background: linear-gradient(135deg, #cffafe 0%, #a5f3fc 100%);
+  border: 2px solid #67e8f9;
+  color: #164e63;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .horario-grid {
+    grid-template-columns: 70px repeat(7, 1fr);
+    gap: 6px;
+    padding: 1.5rem;
+  }
+
+  .class-content {
+    font-size: 0.75rem;
+  }
+
+  .class-content strong {
+    font-size: 0.8rem;
+  }
+
+  .header-cell,
+  .time-cell {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .horario-container {
+    padding: 0 1rem;
+  }
+
+  .horario-grid {
+    grid-template-columns: 60px repeat(7, 1fr);
+    gap: 5px;
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .empty-cell {
+    min-height: 70px;
+  }
+
+  .class-cell {
+    min-height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .estudios-submenu,
+  .circulo-submenu {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    min-width: auto;
+  }
+
+  .estudios-submenu.active,
+  .circulo-submenu.active {
+    transform: none;
+  }
+
+  .estudios-submenu li a,
+  .circulo-submenu li a {
+    padding-left: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .horario-grid {
+    grid-template-columns: 50px repeat(7, 1fr);
+    gap: 4px;
+    padding: 1rem;
+  }
+
+  .header-cell {
+    padding: 0.6rem 0.3rem;
+    font-size: 0.75rem;
+  }
+
+  .time-cell {
+    padding: 0.6rem 0.3rem;
+    font-size: 0.75rem;
+  }
+
+  .class-content {
+    font-size: 0.65rem;
+  }
+
+  .class-content strong {
+    font-size: 0.7rem;
+  }
+
+  .class-content small {
+    font-size: 0.65rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .empty-cell {
+    min-height: 60px;
+  }
+
+  .class-cell {
+    min-height: 60px;
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .horario-container {
+    padding: 0 0.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .horario-grid {
+    overflow-x: auto;
+    display: block;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .class-content {
+    font-size: 0.6rem;
+  }
+
+  .class-content strong {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .horario-grid {
+    padding: 0.8rem;
+  }
+}

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Círculo Social</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="CSS/estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="CSS/estilo_circulo.css" />
+  </head>
+  <body>
+     <header>
+      <div class="header-izquierdo">
+        <h1 class="logo">
+          <a href="index.html">Yael Eduardo G.R</a>
+        </h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="datos.html">Datos Personales</a></li>
+          <li>
+            <a href="#" class="circulo-dropdown-toggle">
+              Círculo Social <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="circulo-submenu">
+              <li><a href="circulo.html#familia" onclick="navegarASeccion(event, 'circulo.html', 'familia')">Familia</a></li>
+              <li><a href="circulo.html#pareja" onclick="navegarASeccion(event, 'circulo.html', 'pareja')">Pareja</a></li>
+              <li><a href="circulo.html#amigos" onclick="navegarASeccion(event, 'circulo.html', 'amigos')">Amigos</a></li>
+              <li><a href="circulo.html#mascotas" onclick="navegarASeccion(event, 'circulo.html', 'mascotas')">Mascotas</a></li>
+            </ul>
+          </li>
+          <li><a href="hobbies.html">Mis hobbies</a></li>
+          <li>
+            <a href="#" class="estudios-dropdown-toggle">
+              Estudios Realizados <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="estudios-submenu">
+              <li><a href="universidad.html">Universidad</a></li>
+              <li><a href="preparatoria.html">Preparatoria</a></li>
+              <li><a href="kinder-secundaria.html">Kinder-Secundaria</a></li>
+            </ul>
+          </li>
+          <li><a href="experiencia.html">Experiencia Profesional</a></li>
+          <li><a href="contactar.html" class="boton-contacto">Contactar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="familia-amigos-seccion">
+      <div class="seccion-header">
+        <h2><i class="fas fa-heart"></i> Familia, Amigos y Pareja</h2>
+      </div>
+
+      <div class="tabs-container">
+        <ul class="nav nav-tabs" id="relacionesTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="familia-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#familia"
+              type="button"
+              role="tab"
+              aria-controls="familia"
+              aria-selected="true"
+            >
+              Familia
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="amigos-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#amigos"
+              type="button"
+              role="tab"
+              aria-controls="amigos"
+              aria-selected="false"
+            >
+              Amigos
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pareja-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#pareja"
+              type="button"
+              role="tab"
+              aria-controls="pareja"
+              aria-selected="false"
+            >
+              <i class="fas fa-heart"></i> Mi Pareja
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="mascotas-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#mascotas"
+              type="button"
+              role="tab"
+              aria-controls="mascotas"
+              aria-selected="false"
+            >
+              <i class="fas fa-paw"></i> Mascotas
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="relacionesTabContent">
+          <!-- TAB FAMILIA -->
+          <div
+            class="tab-pane fade show active"
+            id="familia"
+            role="tabpanel"
+            aria-labelledby="familia-tab"
+          >
+            <div class="personas-grid">
+              <!-- Papá - Carrusel -->
+              <div class="persona-tarjeta">
+                <div class="persona-carousel-wrapper">
+                  <div id="carouselPapa" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="imagenes/papa/000_0766.jpg" class="d-block w-100" alt="Papá foto 1">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imagenes/papa/DSC_0347.jpg" class="d-block w-100" alt="Papá foto 2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imagenes/papa/IMG20240810182414.jpg" class="d-block w-100" alt="Papá foto 3">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPapa" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselPapa" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Siguiente</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="persona-info">
+                  <h3 class="persona-nombre">Antonio Guzmán</h3>
+                  <p class="persona-relacion">Padre</p>
+                </div>
+              </div>
+
+              <!-- Mamá - Carrusel -->
+              <div class="persona-tarjeta">
+                <div class="persona-carousel-wrapper">
+                  <div id="carouselMama" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="imagenes/mama/000_0266.jpg" class="d-block w-100" alt="Mamá foto 1">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imagenes/mama/20190709_121118.jpg" class="d-block w-100" alt="Mamá foto 2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imagenes/mama/IMG_20210828_134717.jpg" class="d-block w-100" alt="Mamá foto 3">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselMama" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselMama" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Siguiente</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="persona-info">
+                  <h3 class="persona-nombre">Fabiola de la Rosa</h3>
+                  <p class="persona-relacion">Madre</p>
+                </div>
+              </div>
+
+              <!-- Hermana - Carrusel -->
+              <div class="persona-tarjeta">
+                <div class="persona-carousel-wrapper">
+                  <div id="carouselHermana" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="imagenes/eve/DSC_0284.jpg" class="d-block w-100" alt="Hermana foto 1">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imagenes/eve/DSC_0404.jpg" class="d-block w-100" alt="Hermana foto 2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imagenes/eve/WhatsApp Image 2025-10-24 at 6.08.50 PM.jpeg" class="d-block w-100" alt="Hermana foto 3">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselHermana" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselHermana" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Siguiente</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="persona-info">
+                  <h3 class="persona-nombre">Evelyn Guzmán</h3>
+                  <p class="persona-relacion">Hermana</p>
+                </div>
+              </div>
+
+              <!-- Primos - Carrusel -->
+              <div class="persona-tarjeta">
+                <div class="persona-carousel-wrapper">
+                  <div id="carouselPrimos" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="imagenes/fam/DSC_0303.jpg" class="d-block w-100" alt="Primos foto 1">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imagenes/fam/DSC06675.jpg" class="d-block w-100" alt="Primos foto 2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imagenes/fam/WhatsApp Image 2025-11-05 at 10.14.42 PM.jpeg" class="d-block w-100" alt="Primos foto 3">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPrimos" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselPrimos" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Siguiente</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="persona-info">
+                  <h3 class="persona-nombre">Mis Primos</h3>
+                  <p class="persona-relacion">Familia Extendida</p>
+                </div>
+              </div>
+
+              <!-- Familia Completa -->
+              <div class="persona-tarjeta">
+                <div class="persona-carousel-wrapper">
+                  <div id="carouselFamiliaCompleta" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="imagenes/fam/DSC_0202.jpg" class="d-block w-100" alt="Familia completa foto 1">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imagenes/fam/DSC_0495.jpg" class="d-block w-100" alt="Familia completa foto 2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="imagenes/fam/IMG_20230210_175450.jpg" class="d-block w-100" alt="Familia completa foto 3">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselFamiliaCompleta" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselFamiliaCompleta" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Siguiente</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="persona-info">
+                  <h3 class="persona-nombre">Familia completa</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB AMIGOS -->
+          <div
+            class="tab-pane fade"
+            id="amigos"
+            role="tabpanel"
+            aria-labelledby="amigos-tab"
+          >
+            <div class="amigos-grid">
+              <div class="persona-tarjeta">
+                <div class="persona-imagen-wrapper">
+                  <img
+                    src="imagenes/amigos/DSC_0292.jpg"
+                    alt="Amigo de la primaria"
+                    class="persona-imagen clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Angel', 'Compañero de la primaria hasta secundaria con quien comparto muchos recuerdos')"
+                  />
+                </div>
+                <div class="persona-info">
+                  <h3 class="persona-nombre">Angel Alejandro</h3>
+                  <p class="persona-relacion">Amigo de la primaria</p>
+                </div>
+              </div>
+
+              <div class="persona-tarjeta">
+                <div class="persona-imagen-wrapper">
+                  <img
+                    src="imagenes/amigos/DSC_0428.jpg"
+                    alt="Amigo de la primaria"
+                    class="persona-imagen clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Ailton', 'Compañero de la primaria hasta secundaria con quien me lleve muy bien en su tiempo')"
+                  />
+                </div>
+                <div class="persona-info">
+                  <h3 class="persona-nombre">Ailton</h3>
+                  <p class="persona-relacion">Amigo de la primaria</p>
+                </div>
+              </div>
+              
+              <div class="persona-tarjeta">
+                <div class="persona-imagen-wrapper">
+                  <img
+                    src="imagenes/amigos/DSC_0415.jpg"
+                    alt="Amigos de la primaria"
+                    class="persona-imagen clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Axel', 'Compañero de la primaria hasta secundaria con quien comparti momentos deportivos y escolares')"
+                  />
+                </div>
+                <div class="persona-info">
+                  <h3 class="persona-nombre">Axel</h3>
+                  <p class="persona-relacion">Amigo de la primaria</p>
+                </div>
+              </div>
+
+              <div class="persona-tarjeta">
+                <div class="persona-imagen-wrapper">
+                  <img
+                    src="imagenes/amigos/yayocjuarez1.jpg"
+                    alt="Amigos del selectivo de la uni"
+                    class="persona-imagen clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Seleccion de futbol', 'Amigos con quienes creci deportivamente y vivi muchas experiencias en el futbol')"
+                  />
+                </div>
+                <div class="persona-info">
+                  <h3 class="persona-nombre">Seleccion de futbol</h3>
+                  <p class="persona-relacion">Amigo de la seleccion </p>
+                </div>
+              </div>
+
+              <div class="persona-tarjeta">
+                <div class="persona-imagen-wrapper">
+                  <img
+                    src="imagenes/amigos/IMG-20231019-WA0043.jpg"
+                    alt="Kevin Bardesi"
+                    class="persona-imagen clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Kevin Bardesi', 'Mi mejor amigo que conoci en la uni y juntos hemos compartido innumerables momentos inolvidables,como competir en nacionales juntos o ir al gym juntos')"
+                  />
+                </div>
+                <div class="persona-info">
+                  <h3 class="persona-nombre">Kevin Bardesi</h3>
+                  <p class="persona-relacion">Mejor amigo</p>
+                </div>
+              </div>
+
+              <div class="persona-tarjeta">
+                <div class="persona-imagen-wrapper">
+                  <img
+                    src="imagenes/amigos/WhatsApp Image 2025-10-24 at 1.02.55 PM.jpeg"
+                    alt="Lucero de Jesus"
+                    class="persona-imagen clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Lucero de Jesus', 'Compañera de universidad, que conoci en ingles y desde que nos hablamos nos llevamos muy bien')"
+                  />
+                </div>
+                <div class="persona-info">
+                  <h3 class="persona-nombre">Lucero de Jesus</h3>
+                  <p class="persona-relacion">Amiga de la universidad</p>
+                </div>
+              </div>
+
+              <div class="persona-tarjeta">
+                <div class="persona-imagen-wrapper">
+                  <img
+                    src="imagenes/amigos/WhatsApp Image 2025-10-27 at 10.24.36 PM.jpeg"
+                    alt="José Coca"
+                    class="persona-imagen clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'José Coca', 'Gran amigo de la universidad, con quien he trabajado en varios proyectos académicos y compartido muchos momentos diveritos.')"
+                  />
+                </div>
+                <div class="persona-info">
+                  <h3 class="persona-nombre">José Coca</h3>
+                  <p class="persona-relacion">Amigo de la universidad</p>
+                </div>
+              </div>
+
+              <div class="persona-tarjeta">
+                <div class="persona-imagen-wrapper">
+                  <img
+                    src="imagenes/amigos/IMG_20230712_105517_536.jpg"
+                    alt="Jose Daizo"
+                    class="persona-imagen clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Jose Daizo', 'Un amigo que conoci en la seleccion y con el me he divertido mucho')"
+                  />
+                </div>
+                <div class="persona-info">
+                  <h3 class="persona-nombre">Jose Daizo</h3>
+                  <p class="persona-relacion">Amigo de la universidad</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB PAREJA -->
+          <div
+            class="tab-pane fade"
+            id="pareja"
+            role="tabpanel"
+            aria-labelledby="pareja-tab"
+          >
+            <div class="seccion-header-especial">
+              <i class="fas fa-heart icono-especial"></i>
+              <h3 class="titulo-especial">Mi Novia</h3>
+              <p class="descripcion-especial">
+                Momentos especiales compartidos juntos
+              </p>
+            </div>
+
+            <div class="galeria-pareja">
+              <div class="foto-pareja-card">
+                <div class="foto-pareja-wrapper">
+                  <img
+                    src="imagenes/bet/IMG-20241027-WA0004.jpg"
+                    alt="Foto con mi novia"
+                    class="foto-pareja clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Viaje a Six Flags', 'Un día increíble lleno de adrenalina y diversión. Disfrutamos cada momento juntos en este parque de diversiones.')"
+                  />
+                </div>
+                <p class="foto-caption">Viaje a Six Flags</p>
+              </div>
+
+              <div class="foto-pareja-card">
+                <div class="foto-pareja-wrapper">
+                  <img
+                    src="imagenes/bet/IMG-20250427-WA0049.jpg"
+                    alt="Foto con mi novia"
+                    class="foto-pareja clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Viaje a la playa', 'Sol, arena y mar. Momentos de relajación y felicidad en la playa, creando recuerdos inolvidables.')"
+                  />
+                </div>
+                <p class="foto-caption">Viaje a la playa</p>
+              </div>
+
+              <div class="foto-pareja-card">
+                <div class="foto-pareja-wrapper">
+                  <img
+                    src="imagenes/bet/IMG20241216171510.jpg"
+                    alt="Foto con mi novia"
+                    class="foto-pareja clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Navidad Juntos', 'Celebrando la Navidad juntos, rodeados de amor y alegría. Una fecha muy especial para ambos.')"
+                  />
+                </div>
+                <p class="foto-caption">Navidad Juntos</p>
+              </div>
+
+              <div class="foto-pareja-card">
+                <div class="foto-pareja-wrapper">
+                  <img
+                    src="imagenes/bet/IMG20250312170908.jpg"
+                    alt="Foto con mi novia"
+                    class="foto-pareja clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Día juntos', 'Un día casual pero especial, disfrutando de nuestra compañía y creando nuevos recuerdos.')"
+                  />
+                </div>
+                <p class="foto-caption">Día juntos</p>
+              </div>
+
+              <div class="foto-pareja-card">
+                <div class="foto-pareja-wrapper">
+                  <img
+                    src="imagenes/bet/IMG-20250602-WA0047.jpg"
+                    alt="Foto con mi novia"
+                    class="foto-pareja clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Momento juntos', 'Capturando un momento espontáneo y hermoso. Estos son los instantes que más atesoramos.')"
+                  />
+                </div>
+                <p class="foto-caption">Momento juntos</p>
+              </div>
+
+              <div class="foto-pareja-card">
+                <div class="foto-pareja-wrapper">
+                  <img
+                    src="imagenes/bet/IMG-20250914-WA0122.jpg"
+                    alt="Foto con mi novia"
+                    class="foto-pareja clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Siempre juntos', 'Juntos en las buenas y en las malas. Esta foto representa nuestro compromiso y amor mutuo.')"
+                  />
+                </div>
+                <p class="foto-caption">Siempre juntos</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB MASCOTAS -->
+          <div
+            class="tab-pane fade"
+            id="mascotas"
+            role="tabpanel"
+            aria-labelledby="mascotas-tab"
+          >
+            <div class="seccion-header-especial">
+              <i class="fas fa-paw icono-especial"></i>
+              <h3 class="titulo-especial">Mis Mascotas</h3>
+              <p class="descripcion-especial">
+                Compañeros fieles que alegran mi vida
+              </p>
+            </div>
+
+            <div class="galeria-mascotas">
+              <div class="mascota-card">
+                <div class="mascota-wrapper">
+                  <img
+                    src="imagenes/Mascotas/20190416_194821.jpg"
+                    alt="Mascota 1"
+                    class="mascota-imagen clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Mi Mascota', 'Un compañero fiel que siempre está ahí para alegrar mis días.')"
+                  />
+                </div>
+                <p class="mascota-caption">Mi Compañero Fiel</p>
+              </div>
+
+              <div class="mascota-card">
+                <div class="mascota-wrapper">
+                  <img
+                    src="imagenes/Mascotas/20210724_195643.jpg"
+                    alt="Mascota 2"
+                    class="mascota-imagen clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Momentos Divertidos', 'Los momentos más divertidos son con mi mejor amigo peludo.')"
+                  />
+                </div>
+                <p class="mascota-caption">Momentos Divertidos</p>
+              </div>
+
+              <div class="mascota-card">
+                <div class="mascota-wrapper">
+                  <img
+                    src="imagenes/Mascotas/IMG_20230825_185303873.jpg"
+                    alt="Mascota 3"
+                    class="mascota-imagen clickable-image"
+                    onclick="abrirModal(this.src, this.alt, 'Amor Incondicional', 'El amor más puro e incondicional que existe.')"
+                  />
+                </div>
+                <p class="mascota-caption">Amor Incondicional</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal para imágenes -->
+    <div id="modalImagen" class="modal-fullscreen-image" onclick="cerrarModalClick(event)">
+      <span class="modal-close-btn" onclick="cerrarModal()">&times;</span>
+      <div class="modal-content-wrapper">
+        <div class="modal-image-container">
+          <img class="modal-fullscreen-content" id="imagenModal" alt="">
+        </div>
+        <div class="modal-description-container">
+          <h3 class="modal-description-title" id="modalTitulo"></h3>
+          <p class="modal-description-text" id="modalDescripcion"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="iconos">
+      <a
+        href="https://www.instagram.com/yael_eduardo_guzman_/"
+        target="_blank"
+        class="icono instagram"
+        ><i class="fa-brands fa-square-instagram"></i
+      ></a>
+      <a
+        href="mailto:yaeloyel@gmail.com"
+        class="icono email"
+        target="_blank"
+        ><i class="fas fa-envelope"></i
+      ></a>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 TECNM/ITP/Yael Eduardo Guzmán de la Rosa</p>
+    </footer>
+
+    <script>
+      // Función para mostrar sección específica
+      function mostrarSeccion(event, seccion) {
+        if (event) {
+          event.preventDefault();
+        }
+        const tabButton = document.getElementById(seccion + '-tab');
+        if (tabButton) {
+          const tab = new bootstrap.Tab(tabButton);
+          tab.show();
+        }
+        const submenu = document.querySelector('.circulo-submenu');
+        if (submenu) {
+          submenu.classList.remove('active');
+        }
+      }
+
+      // Toggle del menú desplegable
+      document.addEventListener('DOMContentLoaded', function() {
+        const dropdownToggle = document.querySelector('.circulo-dropdown-toggle');
+        const submenu = document.querySelector('.circulo-submenu');
+        
+        if (dropdownToggle && submenu) {
+          dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            submenu.classList.toggle('active');
+          });
+
+          document.addEventListener('click', function(e) {
+            if (!e.target.closest('li')) {
+              submenu.classList.remove('active');
+            }
+          });
+        }
+
+        // Verificar si hay una sección guardada en sessionStorage
+        const seccionDestino = sessionStorage.getItem('seccionDestino');
+        if (seccionDestino) {
+          // Mostrar la sección correspondiente
+          const tabButton = document.getElementById(seccionDestino + '-tab');
+          if (tabButton) {
+            const tab = new bootstrap.Tab(tabButton);
+            tab.show();
+          }
+          // Limpiar el sessionStorage
+          sessionStorage.removeItem('seccionDestino');
+        }
+
+        
+        const hash = window.location.hash.substring(1); 
+        if (hash) {
+          const tabButton = document.getElementById(hash + '-tab');
+          if (tabButton) {
+            const tab = new bootstrap.Tab(tabButton);
+            tab.show();
+          }
+        }
+      });
+
+      // Funciones del modal
+      function abrirModal(src, alt, titulo, descripcion) {
+        const modal = document.getElementById('modalImagen');
+        const modalImg = document.getElementById('imagenModal');
+        const modalTitulo = document.getElementById('modalTitulo');
+        const modalDescripcion = document.getElementById('modalDescripcion');
+        
+        modal.classList.add('active');
+        modalImg.src = src;
+        modalImg.alt = alt;
+        modalTitulo.textContent = titulo;
+        modalDescripcion.textContent = descripcion;
+        document.body.style.overflow = 'hidden';
+      }
+
+      function cerrarModal() {
+        const modal = document.getElementById('modalImagen');
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      function cerrarModalClick(event) {
+        if (event.target.id === 'modalImagen') {
+          cerrarModal();
+        }
+      }
+
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          cerrarModal();
+        }
+      });
+      // Función para navegar a una sección específica en otra página
+  function navegarASeccion(event, pagina, seccion) {
+    event.preventDefault();
+    sessionStorage.setItem('seccionDestino', seccion);
+    window.location.href = pagina;
+  }
+
+  // Toggle del menú desplegable
+  document.addEventListener('DOMContentLoaded', function() {
+    // Toggle del menú desplegable Círculo Social
+    const dropdownToggle = document.querySelector('.circulo-dropdown-toggle');
+    const submenu = document.querySelector('.circulo-submenu');
+    
+    if (dropdownToggle && submenu) {
+      dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        submenu.classList.toggle('active');
+      });
+
+      // Cerrar el menú si se hace clic fuera
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav ul li')) {
+          submenu.classList.remove('active');
+        }
+      });
+    }
+
+    // Toggle del menú desplegable Estudios Realizados
+    const estudiosToggle = document.querySelector('.estudios-dropdown-toggle');
+    const estudiosSubmenu = document.querySelector('.estudios-submenu');
+    
+    if (estudiosToggle && estudiosSubmenu) {
+      estudiosToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        estudiosSubmenu.classList.toggle('active');
+      });
+
+      // Cerrar el menú si se hace clic fuera
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav ul li')) {
+          estudiosSubmenu.classList.remove('active');
+        }
+      });
+    }
+  });
+    </script>
+  </body>
+</html>

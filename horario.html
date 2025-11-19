@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horario Semestral</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="CSS/estilo_horario.css">
+</head>
+<body>
+  <header>
+    <div class="header-izquierdo">
+      <h1 class="logo">
+        <a href="index.html">Yael Eduardo G.R</a>
+      </h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="datos.html">Datos Personales</a></li>
+        <li>
+          <a href="#" class="circulo-dropdown-toggle">
+            Círculo Social <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul class="circulo-submenu">
+            <li><a href="circulo.html#familia" onclick="navegarASeccion(event, 'circulo.html', 'familia')">Familia</a></li>
+            <li><a href="circulo.html#pareja" onclick="navegarASeccion(event, 'circulo.html', 'pareja')">Pareja</a></li>
+            <li><a href="circulo.html#amigos" onclick="navegarASeccion(event, 'circulo.html', 'amigos')">Amigos</a></li>
+            <li><a href="circulo.html#mascotas" onclick="navegarASeccion(event, 'circulo.html', 'mascotas')">Mascotas</a></li>
+          </ul>
+        </li>
+        <li><a href="hobbies.html">Mis hobbies</a></li>
+        <li>
+          <a href="#" class="estudios-dropdown-toggle">
+            Estudios Realizados <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul class="estudios-submenu">
+            <li><a href="universidad.html">Universidad</a></li>
+            <li><a href="preparatoria.html">Preparatoria</a></li>
+            <li><a href="kinder-secundaria.html">Kinder-Secundaria</a></li>
+          </ul>
+        </li>
+        <li><a href="experiencia.html">Experiencia Profesional</a></li>
+        <li><a href="contactar.html" class="boton-contacto">Contactar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="horario-container">
+    <h2>📅 Horario Semestral</h2>
+
+    <div class="horario-grid">
+      <!-- Encabezados de días -->
+      <div class="header-cell">Hora</div>
+      <div class="header-cell">Lun</div>
+      <div class="header-cell">Mar</div>
+      <div class="header-cell">Mié</div>
+      <div class="header-cell">Jue</div>
+      <div class="header-cell">Vie</div>
+      <div class="header-cell">Sáb</div>
+      <div class="header-cell">Dom</div>
+
+      <!-- 07:00 -->
+      <div class="time-cell">07:00</div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+
+      <!-- 08:00 -->
+      <div class="time-cell">08:00</div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+
+      <!-- 09:00 -->
+      <div class="time-cell">09:00</div>
+      <div class="empty-cell"></div>
+      <div class="class-cell pink" style="grid-row: span 2;">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          PROGRAMAC. WEB<br>
+          Aula: 36L3<br>
+          Paquete: 06A<br>
+          <small>09:00-11:00</small>
+        </div>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="class-cell pink" style="grid-row: span 2;">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          PROGRAMAC. WEB<br>
+          Aula: 36L3<br>
+          Paquete: 06A<br>
+          <small>09:00-11:00</small>
+        </div>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+
+      <!-- 10:00 -->
+      <div class="time-cell">10:00</div>
+      <div class="empty-cell"></div>
+      <!-- Continúa desde 09:00 -->
+      <div class="empty-cell"></div>
+      <!-- Continúa desde 09:00 -->
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+
+      <!-- 11:00 -->
+      <div class="time-cell">11:00</div>
+      <div class="empty-cell"></div>
+      <div class="class-cell purple" style="grid-row: span 2;">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          ADMON. DE PROY.<br>
+          Aula: 07B<br>
+          Paquete: 08B<br>
+          <small>11:00-13:00</small>
+        </div>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="class-cell purple" style="grid-row: span 2;">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          ADMON. DE PROY.<br>
+          Aula: 07B<br>
+          Paquete: 08B<br>
+          <small>11:00-13:00</small>
+        </div>
+      </div>
+      <div class="class-cell pink">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          PROGRAMAC. WEB<br>
+          Aula: 36L3<br>
+          Paquete: 06A<br>
+          <small>11:00-12:00</small>
+        </div>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+
+      <!-- 12:00 -->
+      <div class="time-cell">12:00</div>
+      <div class="empty-cell"></div>
+      <!-- Continúa desde 11:00 -->
+      <div class="empty-cell"></div>
+      <!-- Continúa desde 11:00 -->
+      <div class="class-cell purple">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          ADMON. DE PROY.<br>
+          Aula: 07B<br>
+          Paquete: 08B<br>
+          <small>12:00-13:00</small>
+        </div>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+
+      <!-- 13:00 -->
+      <div class="time-cell">13:00</div>
+      <div class="class-cell yellow" style="grid-row: span 2;">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          B.D. DISTRIBUID<br>
+          Aula: 36L3<br>
+          Paquete: 06C<br>
+          <small>13:00-15:00</small>
+        </div>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="class-cell yellow" style="grid-row: span 2;">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          B.D. DISTRIBUID<br>
+          Aula: 36L3<br>
+          Paquete: 06C<br>
+          <small>13:00-15:00</small>
+        </div>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="class-cell yellow">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          B.D. DISTRIBUID<br>
+          Aula: 36L3<br>
+          Paquete: 06C<br>
+          <small>13:00-14:00</small>
+        </div>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+
+      <!-- 14:00 -->
+      <div class="time-cell">14:00</div>
+      <!-- Continúa desde 13:00 -->
+      <div class="empty-cell"></div>
+      <!-- Continúa desde 13:00 -->
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+
+      <!-- 15:00 -->
+      <div class="time-cell">15:00</div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+
+      <!-- 16:00 -->
+      <div class="time-cell">16:00</div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+
+      <!-- 17:00 -->
+      <div class="time-cell">17:00</div>
+      <div class="class-cell orange" style="grid-row: span 2;">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          ADMON. Y SEG. DE REDES<br>
+          Aula: 36L4<br>
+          Paquete: 06B<br>
+          <small>17:00-19:00</small>
+        </div>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="class-cell orange" style="grid-row: span 2;">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          ADMON. Y SEG. DE REDES<br>
+          Aula: 36L4<br>
+          Paquete: 06B<br>
+          <small>17:00-19:00</small>
+        </div>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="class-cell orange">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          ADMON. Y SEG. DE REDES<br>
+          Aula: 36L4<br>
+          Paquete: 06B<br>
+          <small>17:00-18:00</small>
+        </div>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+
+      <!-- 18:00 -->
+      <div class="time-cell">18:00</div>
+      <!-- Continúa desde 17:00 -->
+      <div class="empty-cell"></div>
+      <!-- Continúa desde 17:00 -->
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+
+      <!-- 19:00 -->
+      <div class="time-cell">19:00</div>
+      <div class="class-cell cyan" style="grid-row: span 2;">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          TALLER DE INV. I<br>
+          Aula: 07A<br>
+          Paquete: 07A<br>
+          <small>19:00-21:00</small>
+        </div>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="class-cell cyan" style="grid-row: span 2;">
+        <div class="class-content">
+          <strong>ING. EN TIC'S</strong><br>
+          TALLER DE INV. I<br>
+          Aula: 07A<br>
+          Paquete: 07A<br>
+          <small>19:00-21:00</small>
+        </div>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+
+      <!-- 20:00 -->
+      <div class="time-cell">20:00</div>
+      <!-- Continúa desde 19:00 -->
+      <div class="empty-cell"></div>
+      <!-- Continúa desde 19:00 -->
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+    </div>
+  </div>
+
+  <script>
+    // Función para navegar a una sección específica en otra página
+    function navegarASeccion(event, pagina, seccion) {
+      event.preventDefault();
+      sessionStorage.setItem('seccionDestino', seccion);
+      window.location.href = pagina;
+    }
+
+    // Toggle del menú desplegable
+    document.addEventListener('DOMContentLoaded', function() {
+      const circuloToggle = document.querySelector('.circulo-dropdown-toggle');
+      const circuloSubmenu = document.querySelector('.circulo-submenu');
+      
+      const estudiosToggle = document.querySelector('.estudios-dropdown-toggle');
+      const estudiosSubmenu = document.querySelector('.estudios-submenu');
+      
+      if (circuloToggle && circuloSubmenu) {
+        circuloToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          circuloSubmenu.classList.toggle('active');
+          if (estudiosSubmenu) estudiosSubmenu.classList.remove('active');
+        });
+      }
+
+      if (estudiosToggle && estudiosSubmenu) {
+        estudiosToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          estudiosSubmenu.classList.toggle('active');
+          if (circuloSubmenu) circuloSubmenu.classList.remove('active');
+        });
+      }
+
+      // Cerrar los menús si se hace clic fuera
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav ul li')) {
+          if (circuloSubmenu) circuloSubmenu.classList.remove('active');
+          if (estudiosSubmenu) estudiosSubmenu.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
